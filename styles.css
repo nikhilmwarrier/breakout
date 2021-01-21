@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#777, #ccc, #ccc, #aaa, #aaa, #aaa, #ddd);
+}
+
+canvas {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+#phaser-game {
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+  background: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.led {
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  margin: 7px;
+  height: 10px;
+  width: 10px;
+  background: lime;
+  box-shadow: 1px 1px 3px 3px rgba(0, 255, 0, 0.2);
+  right: 0;
+  bottom: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(236, 236, 236);
+  padding: 5px;
+  box-shadow: -1px -1px 3px rgba(128, 128, 128, 0.2);
+  color: #333;
+  font-size: 80%;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: darkcyan;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  width: 400px;
+  max-width: 90%;
+  height: auto;
+  min-height: 400px;
+  background: #333;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.popup h1 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.popup p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+#install-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00b600;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+@media (orientation: portrait) {
+  body {
+    background: #333;
+  }
+  #phaser-game {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  canvas {
+    max-width: 99vw;
+    max-height: 99vh;
+  }
+
+  footer {
+    width: 100%;
+    background: transparent;
+    color: #fff;
+  }
+}

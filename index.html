@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme_color" content="#ccc" />
+    <meta
+      name="viewport"
+      content="user-scalable=0, initial-scale=1,minimum-scale=1, maximum-scale=1, width=device-width, minimal-ui=1"
+    />
+    <meta name="shortcut_icon" content="./assets/icon_192.png" />
+    <title>Breakout</title>
+    <script src="js/phaser.min.js"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="phaser-game">
+      <div class="led" onclick="openPopup('.popup-overlay')"></div>
+    </div>
+    <div class="popup-overlay" onclick="this.style.display = 'none'">
+      <div class="popup">
+        <h1>Hey! You discovered a secret!</h1>
+        <br />
+        <p>
+          How did you guess that the green light was a button to trigger this
+          little easter egg? <br /><br />
+          Anyway, I hope you had fun playng this little game!
+          <br /><br />
+          Tap anywhere to close
+        </p>
+      </div>
+    </div>
+    <button id="install-btn">Install Web App</button>
+    <footer>
+      <p>
+        Created by
+        <a href="https://nikhilmwarrier.github.io">nikhilmwarrier</a> using
+        <a href="https://phaser.io">Phaser 3</a>
+      </p>
+    </footer>
+    <script src="scenes/Menu.js"></script>
+    <script src="scenes/WinScreen.js"></script>
+    <script src="scenes/LoseScreen.js"></script>
+    <script src="scenes/Level1.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="./sw.js"></script> -->
+    <script src="./app.js"></script>
+  </body>
+</html>
